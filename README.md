@@ -1,5 +1,5 @@
-Tic Tac Toe with AI : Build by python
+My Personal Website : Build by HTML and CSS
 
-This project is an interactive Tic Tac Toe game developed in Python, 
-featuring both player vs. player and player vs. AI modes. 
-The game combines a user-friendly console interface with intelligent game logic, allowing for an engaging experience.
+This project is a personal website designed to showcase my professional details, skills, and resume. 
+Built using HTML and CSS, the website features a clean and modern layout that highlights my experiences, and accomplishments.
+           
