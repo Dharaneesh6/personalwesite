@@ -1,0 +1,328 @@
+/*
+COLOR PALETTE
+
+Dark green    #3c8453
+Sandy beige   #bcaa96
+Dark gray     #222222
+Light gray    #d3d4d6
+Off-white     #f6f6f6
+*/
+
+/* GLABAL STYLE 
+-----------------------*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* set default to 10px */
+
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+html , body {
+  height: 100%;
+  
+  /* if use the height to cover the full view port and if you use width is the same and if you use the both it not need*/
+/* if you have an error put height :  100vh; in body or the element you use*/
+
+}
+
+body {
+  background: #f6f6f6;
+  margin: 0;
+  font-family: "open sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4; /* foe space between words , up down left right*/
+  
+  
+  /* there is a default margin we have disable it*/
+  /* @@@@@@ i recommmed to keep it */
+}
+h1,h2,h3 {
+  
+  font-family: "Caveat", cursive;
+  /*i don't like it
+  font-weight: 400;
+  margin: 0;
+    */
+}
+h1 {
+  font-size: 7rem;
+  line-height: 0.85;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+/*links*/
+a {
+  color: #469d61;
+}
+a:hover {
+  color: #bcaa96;
+  text-decoration: none;
+}
+footer a {
+  color: #e0c29e;
+}
+a:hover {
+  color: #3c8453;
+}
+
+.btn {
+  background: #3c8453;
+  color: #f6f6f6;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 7px;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 900px;
+  
+}
+/* HOME
+---------------------- */
+.home {
+  background: url(../images/bg-home-office-studio.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+  
+  /* to work the the flex the the view port should be 100% || you ca add to html also *\
+
+
+/* if you don't set to column it default set to row
+  The flex property sets the flexible length on flexible items.*/
+.home .content-wrapper {
+  flex: 1 0 auto;
+}
+/*background: rgb(255 255 255 / 0.9);*/
+
+.content-bg {
+  background: rgb(255 255 255 / 0.9);
+  padding: 30px;
+}
+@media screen and (max-width:650px){
+  .home .content-wrapper {
+      padding: 10px;
+  }
+  .content-bg {
+      padding: 20px;
+  }
+}
+
+
+/* RESUME
+---------------------- */
+.resume header::before {
+  background: url(../images/bg-home-office-studio.jpg) center;
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 375px;
+}
+/* we have add the content even if not use it* ||if don't use the content property nothing will display || the img is background of the content */
+
+/* there is pseudo element that able display the img before the content*/
+  
+
+
+
+.resume-section {
+  margin-bottom: 50px;
+}
+.resume-section h2 {
+  border-bottom: 2px dashed #d3d4d6;
+}
+.download-link {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 1200px){
+  .download-link {
+      position: absolute;
+  }
+}
+@media screen and (max-width: 500px){
+  .resume header::before {
+      height: 200px;
+  }
+  h1 {
+      font-size: 5rem;
+  }
+  h2 {
+      font-size: 2.6rem;
+  }
+}
+/* Profile
+---------------------- */
+
+/* Project
+---------------------- */
+
+ 
+.project-item {
+    margin: 30px 0;
+}
+.project-item img {
+    width: 300px;
+}
+@media screen and (min-width:860px) {
+    .project-item {
+        display: flow-root;
+         /* it make the elemet dont overflow to next line*/
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width:650px) and (max-width:859px) {
+    .project-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+    .project-item img {
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px){
+    .project-item img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Eduation
+---------------------- */
+.education-item {
+  margin:  0;
+}
+.education-item p {
+  margin: 0;
+}
+
+
+/* Certifications
+---------------------- */
+
+ 
+.certification-item {
+  
+  margin: 30px 0;
+}
+.certification-item img {
+  width: 300px;
+}
+@media screen and (min-width:860px) {
+  .certification-item {
+      display: flow-root;
+       /* it make the elemet dont overflow to next line*/
+  }
+  .certification-item img {
+      
+      margin-right: 20px;
+      float: left;
+  }
+}
+@media screen and (min-width:650px) and (max-width:2560px) {
+  .certification-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+       
+  }
+  .certification-item img {
+      width: 100%;
+  }
+}
+@media screen and (max-width:500px){
+  .certification-item img {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+}
+
+/* Experience
+---------------------- */
+.work-item {
+  margin: 30px 0;
+}
+.work-details p {
+  margin: 0;
+}
+
+@media screen and (min-width: 860px) and (max-width :2560px) {
+  .work-item {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      column-gap: 20px;
+  }
+  .work-summary p:first-child {
+      margin-top: 0;
+  }
+  .work-details h3 {
+    margin: 0;
+  }
+}
+
+/* FOOTER
+---------------------- */
+footer {
+  background: #222;
+  color: #d3d4d6;
+  
+}
+.social {
+  list-style-type: none;
+  /* it remove the bullet style*/
+  padding: 0;
+  /* it remove padding*/
+}
+.social li {
+  display: inline-block;
+  margin-left: 10px;
+
+}
+.social img {
+  width: 32px;
+
+}
+.social img:hover {
+  opacity: 0.5;
+}
+@media screen and (min-width: 860px){
+  footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+  }
+}
+@media screen and (max-width: 859px){
+  footer {
+      text-align: center;
+      padding: 10px;
+  }
+
+}
